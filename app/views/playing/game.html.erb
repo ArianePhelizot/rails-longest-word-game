@@ -1,0 +1,32 @@
+<div class="container text-center">
+  <h1>Welcome to the longest word-game !</h1>
+<h2>Here is your grid :</h2>
+
+<div id="grid"><%= @grid %></div>
+
+
+<!-- mettre la grid ici
+grid = generate_grid(9)
+puts grid.join(" ") -->
+
+<h2>What's your best shot ?</h2>
+
+<form action="/score" class ="form-inline">
+  <div class="form-group">
+    <input type="text" id="answer" name="answer" placeholder="What's your longest word?" class="form-control" >
+    <input type="hidden" name="start_time" value=<%= Time.now.to_i%> >
+    <input type="hidden" name="grid" value=<%= @grid%>>
+    <input type="submit" value="PLAY !" class = "btn btn-primary">
+  </div>
+</form>
+
+
+</div>
+
+<!-- Mettre un formulaire ici avec la réponse -->
+
+<!-- puts "What's your best shot ?"
+start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now -->
+
